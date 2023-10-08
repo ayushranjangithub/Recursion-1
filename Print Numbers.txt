@@ -1,0 +1,45 @@
+Print Numbers
+Send Feedback
+Given the number 'n', write a code to print numbers from 1 to n in increasing order recursively.
+Input Format :
+Integer n
+Output Format :
+Numbers from 1 to n (separated by space)
+Constraints :
+1 <= n <= 10000
+Sample Input 1 :
+ 6
+Sample Output 1 :
+1 2 3 4 5 6
+Sample Input 2 :
+ 4
+Sample Output 2 :
+1 2 3 4
+
+
+void printhelper(int num , int n){
+    if(n == 0){
+       return; 
+    }
+    cout<<num<<" ";
+    printhelper(num+1 , n-1);
+}
+void print(int n){
+  printhelper(1 , n);
+}
+
+
+// Main Code:
+
+#include<iostream>
+using namespace std;
+#include "Solution.h"
+
+int main(){
+    int n;
+    cin >> n;
+  
+    print(n);
+}
+
+
